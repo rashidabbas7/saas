@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
 RUN mkdir mycode
 COPY requirements.txt /tmp/requirements.txt
-RUN  pip install -r /tmp/requirements.text
+RUN  pip install -r /tmp/requirements.txt
 WORKDIR mycode
 copy ./src .
 ARG PROJ_NAME="saas"
