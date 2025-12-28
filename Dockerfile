@@ -2,7 +2,7 @@ ARG python_version=3.12-slim-bookworm
 FROM python:${python_version}
 RUN python -m venv saasvenv
 ENV PATH=saasvenv/bin:$PATH
-RUN pip install --upgrade pip
+RUN python -m pip install --upgrade pip
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
