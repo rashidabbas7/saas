@@ -22,7 +22,7 @@ RUN  pip install -r /tmp/requirements.txt
 WORKDIR mycode
 copy ./src .
 ARG PROJ_NAME="saas"
-RUN chmod +x script.sh
+RUN chmod +x ./script.sh
 RUN apt-get remove --purge -y \
     && apt-get autoremove -y \
     && apt-get clean \
