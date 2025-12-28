@@ -1,5 +1,5 @@
-ARG python-version=3.12-slim-bookworm
-FROM python:${python-version}
+ARG python_version=3.12-slim-bookworm
+FROM python:${python_version}
 RUN python -m venv saasvenv
 ENV PATH=saasvenv/bin:$PATH
 RUN pip install --upgrade pip
